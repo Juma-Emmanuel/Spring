@@ -30,5 +30,13 @@ public List<Topic> getAllTopics() {
 	topicService.updateTopic(id, topic);
 	}
 
+	@RequestMapping(method = RequestMethod.DELETE, value="/topics/{id}")
+	public void deleteTopic(@PathVariable String id, @RequestBody Topic topic) {
+
+		topicService.deleteTopic( id);
+	}
+
+
+
 
 }
